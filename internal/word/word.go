@@ -11,3 +11,9 @@ func ToUpper(s string) string {
 func ToLower(s string) string {
 	return strings.ToLower(s)
 }
+
+func UndersocreToUpperCamelCase(s string) string {
+	s = strings.Replace(s, "_", " ", -1)
+	s = strings.Title(s)
+	return strings.Replace(s, " ", "", -1)
+}
