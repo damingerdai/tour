@@ -23,3 +23,18 @@ func UndersoreToLowerCamelCase(s string) string {
 	s = UndersocreToUpperCamelCase(s)
 	return string(unicode.ToLower(rune(s[0]))) + s[1:]
 }
+
+func CamelCaseToUnderscore(s string) string {
+	var output []rune
+	for i, r := range s {
+		if i == 0 {
+			output = append(output, unicode.ToLower(r))
+			continue
+		}
+		if unicode.IsUpper(r) {
+			output = append(output, '_')
+		}
+		output = append(output, unicode.To)
+	}
+	return string(output)
+}
